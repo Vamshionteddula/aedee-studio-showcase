@@ -150,33 +150,32 @@ const Index = () => {
               </Link>
             </motion.div>
 
-            {/* Stats Grid */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-            >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
-                  className="text-center group"
-                >
-                  <div className="flex justify-center mb-3">
-                    <stat.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-                  </div>
-                  <div className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-small text-muted-foreground">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="flex justify-center mb-3">
+                  <stat.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="text-3xl md:text-4xl font-display font-semibold text-foreground mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-small text-muted-foreground">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
           </motion.div>
         </div>
 
